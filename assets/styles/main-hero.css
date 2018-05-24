@@ -1,0 +1,12 @@
+.main-hero{
+	width:100%;
+
+	&__text{
+		position:absolute;
+	}
+
+	&__subtitle {
+		color:green;
+	}
+}
+
