@@ -1,0 +1,30 @@
+.primary-nav{
+	display:inline-block;
+
+	& ul{
+		display:inline-block;
+		margin-right:10px;
+	}
+
+	& li {
+		list-style:none;
+		display:inline-block;
+		margin:5px;
+		font-size:1.1rem;
+		font-weight:600;
+
+		@mixin atMedium{
+			font-size:1.3rem;
+			margin:8px;
+		}
+
+		@mixin atLarge{
+			font-size:1.5rem;
+			margin:10px;
+		}
+
+		& a{
+			color:white;
+		}
+	}
+}
