@@ -73,7 +73,7 @@
 	&__description{
 		margin-top:-15px;
 		font-size:.7rem;
-		margin-bottom:55px;
+		margin-bottom:50px;
 
 		@mixin atXSmall{
 			margin-bottom:75px;

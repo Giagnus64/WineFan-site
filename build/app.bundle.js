@@ -9048,9 +9048,158 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
+var _ui = __webpack_require__(329);
+
 console.log('Hellio!');
 
 //Get cheers headline and fadeout every 3-4 seconds and replace with "Array" of "Cheers" in different languages
+
+//Build UI class with above and make menu button transform along with header div
+
+
+//Event Listener
+document.querySelector(".header__menu-icon").addEventListener("click", toggleHeader);
+
+document.querySelector(".changing-text").addEventListener('click', setHeader);
+
+//window.onload = testHeader();
+
+//Element vars
+var header = document.querySelector(".changing-text");
+var x = 0;
+
+function toggleHeader() {
+	var menu = document.querySelector(".header__menu-content");
+
+	if (menu.style.display === "none") {
+		_ui.ui.displayMenu();
+	} else {
+		_ui.ui.hideMenu();
+	}
+}
+
+function testHeader() {
+	_ui.ui.fadeOut(header);
+}
+
+function setHeader() {
+	//set counter
+	//let x = 0;
+	//setInterval(function(){
+	_ui.ui.fadeOut(header);
+	setTimeout(function () {
+		_ui.ui.changeHeader(x);
+		if (x < 4) {
+			x++;
+		} else {
+			x = 0;
+		}
+	}, 2000);
+	_ui.ui.fadeIn(header);
+
+	return x;
+	//}, 3000);
+}
+
+/***/ }),
+/* 329 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var UI = function () {
+	function UI() {
+		_classCallCheck(this, UI);
+
+		this.menuButton = document.querySelector(".header__menu-icon");
+		this.menuContent = document.querySelector(".header__menu-content");
+		this.changingText = document.querySelector(".changing-text");
+	}
+
+	_createClass(UI, [{
+		key: "displayMenu",
+		value: function displayMenu() {
+			this.menuContent.style.display = "block";
+			this.menuButton.classList.add("header__menu-icon--close-x");
+		}
+	}, {
+		key: "hideMenu",
+		value: function hideMenu() {
+			this.menuContent.style.display = "none";
+			this.menuButton.classList.remove("header__menu-icon--close-x");
+		}
+	}, {
+		key: "changeHeader",
+		value: function changeHeader(num) {
+			//this.fadeOut(this.changingText);
+
+			var headers = ["Cheers!", "Salute!", "Salud!", "乾杯!", "干杯!"];
+			var x = num;
+
+			if (x < 4) {
+				x++;
+			} else if (x === 4) {
+				x = 0;
+			}
+
+			this.changingText.textContent = headers[x];
+			//this.fadeIn(this.changingText);
+
+		}
+	}, {
+		key: "fadeOut",
+		value: function fadeOut(element) {
+			element.classList.add("hidden");
+			console.log(element);
+		}
+	}, {
+		key: "fadeIn",
+		value: function fadeIn(element) {
+			element.classList.remove("hidden");
+		}
+
+		/*//Function to fade element after some time
+  	fadeOut(element) {
+     	var op = 1;  // initial opacity
+     	var timer = setInterval(function () {
+         if (op <= 0.1){
+            	clearInterval(timer);
+            	element.style.display = 'none';
+         }
+         element.style.opacity = op;
+         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+         op -= op * 0.1;
+     	}, 50);
+  }
+  	//Function to fade element after some time
+  	fadeIn(element) {
+     	var op = 1;  // initial opacity
+     	var timer = setInterval(function () {
+         if (op <= 0.1){
+            	clearInterval(timer);
+            	element.style.display = 'none';
+         }
+         element.style.opacity = op;
+         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+         op -= op * 0.1;
+     	}, 50);
+  }*/
+
+	}]);
+
+	return UI;
+}();
+
+var ui = exports.ui = new UI();
 
 /***/ })
 /******/ ]);
