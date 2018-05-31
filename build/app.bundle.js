@@ -9058,47 +9058,51 @@ console.log('Hellio!');
 
 
 //Event Listener
+//toggles header button
 document.querySelector(".header__menu-icon").addEventListener("click", toggleHeader);
 
-document.querySelector(".changing-text").addEventListener('click', setHeader);
+//loads header changing function onload 
+window.onload = setHeader();
 
-//window.onload = testHeader();
-
-//Element vars
+//Vars
+var menu = document.querySelector(".modal-menu");
+//header for changing header
 var header = document.querySelector(".changing-text");
-var x = 0;
+//counter for changing header
+var headerCounter = 0;
 
 function toggleHeader() {
-	var menu = document.querySelector(".header__menu-content");
 
-	if (menu.style.display === "none") {
-		_ui.ui.displayMenu();
-	} else {
+	if (menu.classList.contains("modal-menu--is-expanded")) {
 		_ui.ui.hideMenu();
+	} else {
+		_ui.ui.displayMenu();
 	}
+	console.log(menu.classList);
 }
 
-function testHeader() {
-	_ui.ui.fadeOut(header);
-}
-
+//Sets header to change every 4.5 seconds
 function setHeader() {
-	//set counter
-	//let x = 0;
-	//setInterval(function(){
-	_ui.ui.fadeOut(header);
-	setTimeout(function () {
-		_ui.ui.changeHeader(x);
-		if (x < 4) {
-			x++;
-		} else {
-			x = 0;
-		}
-	}, 2000);
-	_ui.ui.fadeIn(header);
+	//sets interval for header cycle
+	setInterval(function () {
+		//fades header out at beginning of cycle
+		_ui.ui.fadeOut(header);
+		//changes header content after fade out
+		setTimeout(function () {
+			_ui.ui.changeHeader(headerCounter);
+			if (headerCounter < 4) {
+				headerCounter++;
+			} else {
+				headerCounter = 0;
+			}
+		}, 1000);
+		//fades header back in after fadeout and content change
+		setTimeout(function () {
+			_ui.ui.fadeIn(header);
+		}, 1500);
 
-	return x;
-	//}, 3000);
+		return headerCounter;
+	}, 4500);
 }
 
 /***/ }),
@@ -9121,20 +9125,22 @@ var UI = function () {
 		_classCallCheck(this, UI);
 
 		this.menuButton = document.querySelector(".header__menu-icon");
-		this.menuContent = document.querySelector(".header__menu-content");
+		this.menuModal = document.querySelector(".modal-menu");
 		this.changingText = document.querySelector(".changing-text");
 	}
 
 	_createClass(UI, [{
 		key: "displayMenu",
 		value: function displayMenu() {
-			this.menuContent.style.display = "block";
+			//this.menuContent.style.display = "block";
+			this.menuModal.classList.add("modal-menu--is-expanded");
 			this.menuButton.classList.add("header__menu-icon--close-x");
 		}
 	}, {
 		key: "hideMenu",
 		value: function hideMenu() {
-			this.menuContent.style.display = "none";
+			//this.menuContent.style.display = "none";
+			this.menuModal.classList.remove("modal-menu--is-expanded");
 			this.menuButton.classList.remove("header__menu-icon--close-x");
 		}
 	}, {
@@ -9159,7 +9165,6 @@ var UI = function () {
 		key: "fadeOut",
 		value: function fadeOut(element) {
 			element.classList.add("hidden");
-			console.log(element);
 		}
 	}, {
 		key: "fadeIn",

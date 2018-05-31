@@ -8,6 +8,7 @@
 	padding-top:5px;
 	padding-bottom:2px;
 
+
 	&__brand{
 		display:inline-block;
 		width:30%;
@@ -24,13 +25,17 @@
 	
 
 	&__menu-content{
-		
 		width:100%;
 		text-align:center;
 		display:none;
 		margin-top:-5px;
-		margin-bottom:-5px;
-		
+		margin-bottom:-5px;	
+
+		&--is-expanded{
+			display:block;
+
+		}
+	
 		@mixin atSmall{
 			width:auto;
 			display:inline-block;

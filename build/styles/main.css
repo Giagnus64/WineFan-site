@@ -595,13 +595,17 @@ a{
 	}
 
 .header__menu-content{
-		
 		width:100%;
 		text-align:center;
 		display:none;
 		margin-top:-5px;
 		margin-bottom:-5px;		
 	}
+
+.header__menu-content--is-expanded{
+			display:block;
+
+		}
 
 @media(min-width:510px){
 
@@ -738,3 +742,44 @@ a{
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear;
 }
+
+.modal-menu{
+	position:absolute;
+	z-index:10;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	background-color:rgba(23,51,72,.5);
+	transform:scaleY(0);
+	transition:transform .3s ease-out;
+	transform-origin:top;
+}
+
+.modal-menu ul{
+		padding:0px;
+	}
+
+@media(min-width:510px){
+
+.modal-menu{
+		display:none
+}
+	}
+
+.modal-menu li{
+	list-style:none;
+	font-size:1rem;
+	margin:7px;
+	font-weight:500;
+	}
+
+.modal-menu li a{
+			color:white;
+		}
+
+.modal-menu--is-expanded{
+		transform:scaleY(1);
+
+	}
+
+/* Finalize Colors Later*/

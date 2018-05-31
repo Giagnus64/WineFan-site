@@ -1,16 +1,18 @@
 class UI{
 	constructor(){
 		this.menuButton = document.querySelector(".header__menu-icon");
-		this.menuContent = document.querySelector(".header__menu-content");
+		this.menuModal = document.querySelector(".modal-menu");
 		this.changingText = document.querySelector(".changing-text");
 	}
 
 	displayMenu(){
-		this.menuContent.style.display = "block";
+		//this.menuContent.style.display = "block";
+		this.menuModal.classList.add("modal-menu--is-expanded");
 		this.menuButton.classList.add("header__menu-icon--close-x");
 	}
 	hideMenu(){
-		this.menuContent.style.display = "none";
+		//this.menuContent.style.display = "none";
+		this.menuModal.classList.remove("modal-menu--is-expanded");
 		this.menuButton.classList.remove("header__menu-icon--close-x");
 	}
 

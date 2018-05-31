@@ -16,19 +16,20 @@ document.querySelector(".header__menu-icon").addEventListener("click", toggleHea
 window.onload = setHeader();
 
 //Vars
-const menu = document.querySelector(".header__menu-content");
+const menu = document.querySelector(".modal-menu");
 //header for changing header
 const header = document.querySelector(".changing-text");
 //counter for changing header
 let headerCounter = 0; 
 
 function toggleHeader(){
-
-	if(menu.style.display === "none"){
-		ui.displayMenu();
-	} else{
+	
+	if(menu.classList.contains("modal-menu--is-expanded")){
 		ui.hideMenu();
+	} else{
+		ui.displayMenu();
 	}
+	console.log(menu.classList);
 }
 
 //Sets header to change every 4.5 seconds
