@@ -9048,7 +9048,163 @@ module.exports = function (regExp, replace) {
 "use strict";
 
 
+var _ui = __webpack_require__(329);
+
 console.log('Hellio!');
+
+//Get cheers headline and fadeout every 3-4 seconds and replace with "Array" of "Cheers" in different languages
+
+//Build UI class with above and make menu button transform along with header div
+
+
+//Event Listener
+//toggles header button
+document.querySelector(".header__menu-icon").addEventListener("click", toggleHeader);
+
+//loads header changing function onload 
+window.onload = setHeader();
+
+//Vars
+var menu = document.querySelector(".modal-menu");
+//header for changing header
+var header = document.querySelector(".changing-text");
+//counter for changing header
+var headerCounter = 0;
+
+function toggleHeader() {
+
+	if (menu.classList.contains("modal-menu--is-expanded")) {
+		_ui.ui.hideMenu();
+	} else {
+		_ui.ui.displayMenu();
+	}
+	console.log(menu.classList);
+}
+
+//Sets header to change every 4.5 seconds
+function setHeader() {
+	//sets interval for header cycle
+	setInterval(function () {
+		//fades header out at beginning of cycle
+		_ui.ui.fadeOut(header);
+		//changes header content after fade out
+		setTimeout(function () {
+			_ui.ui.changeHeader(headerCounter);
+			if (headerCounter < 4) {
+				headerCounter++;
+			} else {
+				headerCounter = 0;
+			}
+		}, 1000);
+		//fades header back in after fadeout and content change
+		setTimeout(function () {
+			_ui.ui.fadeIn(header);
+		}, 1500);
+
+		return headerCounter;
+	}, 4500);
+}
+
+/***/ }),
+/* 329 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var UI = function () {
+	function UI() {
+		_classCallCheck(this, UI);
+
+		this.menuButton = document.querySelector(".header__menu-icon");
+		this.menuModal = document.querySelector(".modal-menu");
+		this.changingText = document.querySelector(".changing-text");
+	}
+
+	_createClass(UI, [{
+		key: "displayMenu",
+		value: function displayMenu() {
+			//this.menuContent.style.display = "block";
+			this.menuModal.classList.add("modal-menu--is-expanded");
+			this.menuButton.classList.add("header__menu-icon--close-x");
+		}
+	}, {
+		key: "hideMenu",
+		value: function hideMenu() {
+			//this.menuContent.style.display = "none";
+			this.menuModal.classList.remove("modal-menu--is-expanded");
+			this.menuButton.classList.remove("header__menu-icon--close-x");
+		}
+	}, {
+		key: "changeHeader",
+		value: function changeHeader(num) {
+			//this.fadeOut(this.changingText);
+
+			var headers = ["Cheers!", "Salute!", "Salud!", "乾杯!", "干杯!"];
+			var x = num;
+
+			if (x < 4) {
+				x++;
+			} else if (x === 4) {
+				x = 0;
+			}
+
+			this.changingText.textContent = headers[x];
+			//this.fadeIn(this.changingText);
+
+		}
+	}, {
+		key: "fadeOut",
+		value: function fadeOut(element) {
+			element.classList.add("hidden");
+		}
+	}, {
+		key: "fadeIn",
+		value: function fadeIn(element) {
+			element.classList.remove("hidden");
+		}
+
+		/*//Function to fade element after some time
+  	fadeOut(element) {
+     	var op = 1;  // initial opacity
+     	var timer = setInterval(function () {
+         if (op <= 0.1){
+            	clearInterval(timer);
+            	element.style.display = 'none';
+         }
+         element.style.opacity = op;
+         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+         op -= op * 0.1;
+     	}, 50);
+  }
+  	//Function to fade element after some time
+  	fadeIn(element) {
+     	var op = 1;  // initial opacity
+     	var timer = setInterval(function () {
+         if (op <= 0.1){
+            	clearInterval(timer);
+            	element.style.display = 'none';
+         }
+         element.style.opacity = op;
+         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+         op -= op * 0.1;
+     	}, 50);
+  }*/
+
+	}]);
+
+	return UI;
+}();
+
+var ui = exports.ui = new UI();
 
 /***/ })
 /******/ ]);

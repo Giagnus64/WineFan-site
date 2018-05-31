@@ -1,0 +1,38 @@
+.modal-menu{
+	position:absolute;
+	z-index:10;
+	width:100%;
+	text-align:center;
+	margin:0 auto;
+	background-color:rgba(23,51,72,.5);
+	transform:scaleY(0);
+	transition:transform .3s ease-out;
+	transform-origin:top;
+
+
+	& ul{
+		padding:0px;
+	}
+
+
+	@mixin atSmall{
+		display:none;
+	}
+
+
+	& li{
+	list-style:none;
+	font-size:1rem;
+	margin:7px;
+	font-weight:500;
+
+		& a{
+			color:white;
+		}
+	}
+
+	&--is-expanded{
+		transform:scaleY(1);
+
+	}
+}

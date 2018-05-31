@@ -1,0 +1,16 @@
+.btn{
+	background-color:goldenrod;
+	text-decoration:none;
+	color:white;
+	padding:7px;
+	box-shadow:black 1px 1px;
+
+	@mixin atSmall{
+		padding:10px;
+	}
+
+	@mixin atMedium{
+		font-size:1.7rem;
+	}
+
+}
