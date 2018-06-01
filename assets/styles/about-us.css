@@ -1,0 +1,62 @@
+.about-us{
+
+	&__block{
+		width:100%;
+		flex-basis:100%;
+		margin:0;
+
+		@mixin atSmall{
+			flex-basis:50%;
+		}
+	}
+
+	&__photo{
+
+	}
+
+	&__text-box{
+		/*align-self:center;*/
+
+		text-align:center;
+		
+		& h3{
+			margin-left:5%;
+			margin-right:5%;
+			font-size:1rem;
+
+			@mixin atMedium{
+				font-size:1.3rem;
+			}
+
+			@mixin atLarge{
+				font-size:1.6rem;
+			}
+		}
+
+		& p{
+			line-height:1.5;
+			margin-left:5%;
+			margin-right:5%;
+			font-size:.8rem;
+
+			@mixin atMedium{
+			 font-size:1rem;
+			 margin-left:10%;
+			 margin-right:10%;
+			}
+			@mixin atLarge{
+				font-size:1.3rem;
+			}
+		}
+
+		&--order-two{
+			order:2;
+
+			@mixin atSmall{
+				order:0;
+			}
+		}
+
+	}
+}
+

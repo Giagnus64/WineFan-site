@@ -8,5 +8,10 @@
 @import "primary-nav.css";
 @import "visible.css";
 @import "modal-menu.css";
+@import "row.css";
+@import "about-us.css";
 
-/* Finalize Colors Later*/
+
+/* Finalize Colors Later
+
+Add backgorund color behind packages?*/

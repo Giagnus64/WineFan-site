@@ -351,14 +351,20 @@ body{
 img{
 	max-width:100%;
 	height:auto;
+	display:block;
 }
 
 a{
 	text-decoration:none;
 }
 
+picture{
+	display:block;
+}
+
 .main-hero{
 	position:relative;
+	display:block;
 	
 
 
@@ -367,7 +373,9 @@ a{
 
 .main-hero__image{
 		display:block;
+		vertical-align:bottom;
 		max-height:800px;
+		height:100%;
 	}
 
 .main-hero__text{
@@ -537,6 +545,7 @@ a{
 
 .page-section{
 	position:relative;
+	display:block;
 }
 
 .btn{
@@ -782,4 +791,91 @@ a{
 
 	}
 
-/* Finalize Colors Later*/
+.row{
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+}
+
+.about-us__block{
+		width:100%;
+		flex-basis:100%;
+		margin:0;
+	}
+
+@media(min-width:510px){
+
+.about-us__block{
+			flex-basis:50%
+	}
+	}
+
+.about-us__photo{
+
+	}
+
+.about-us__text-box{
+		/*align-self:center;*/
+
+		text-align:center;
+
+	}
+
+.about-us__text-box h3{
+			margin-left:5%;
+			margin-right:5%;
+			font-size:1rem;
+		}
+
+@media(min-width:700px){
+
+.about-us__text-box h3{
+				font-size:1.3rem
+		}
+	}
+
+@media(min-width:900px){
+
+.about-us__text-box h3{
+				font-size:1.6rem
+		}
+	}
+
+.about-us__text-box p{
+			line-height:1.5;
+			margin-left:5%;
+			margin-right:5%;
+			font-size:.8rem;
+		}
+
+@media(min-width:700px){
+
+.about-us__text-box p{
+			 font-size:1rem;
+			 margin-left:10%;
+			 margin-right:10%
+		}
+	}
+
+@media(min-width:900px){
+
+.about-us__text-box p{
+				font-size:1.3rem
+		}
+	}
+
+.about-us__text-box--order-two{
+			order:2;
+		}
+
+@media(min-width:510px){
+
+.about-us__text-box--order-two{
+				order:0
+		}
+	}
+
+/* Finalize Colors Later
+
+Add backgorund color behind packages?*/

@@ -1,9 +1,12 @@
 .main-hero{
 	position:relative;
+	display:block;
 
 	&__image{
 		display:block;
+		vertical-align:bottom;
 		max-height:800px;
+		height:100%;
 	}
 
 	&__text{
