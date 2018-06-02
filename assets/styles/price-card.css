@@ -1,0 +1,75 @@
+.price-card{
+	flex-basis:100%;
+	text-align:center;
+	background-color:mistyrose;
+	min-height:350px;
+	border:1px solid black;
+	margin:2px;
+	position:relative;
+
+
+	
+	@mixin atSmall{
+		flex-basis:70%;
+	}
+
+	@mixin atMedium{
+		flex-basis:31%;
+		margin:5px;
+	}
+
+	&__heading{
+		font-weight:600;
+		font-size:1.5rem;
+	}
+
+	&__price{
+		font-size:1.8rem;
+		font-weight:600;
+	}
+
+	&__description{
+		width:90%;
+		margin:0 auto;
+		@mixin atMedium{
+			font-size:.85rem;
+		}
+
+		@mixin atLarge{
+			font-size:1.1rem;
+		}
+	}
+
+	&__button{
+		position:absolute;
+		bottom:20%;
+		left:28%;
+		background-color:goldenrod;
+		width:40%;
+		padding:10px;
+		color:white;
+		font-weight:500;
+		margin-top:auto;
+		margin-bottom:auto;
+		box-shadow:black 1px 1px;
+
+		@mixin atMedium{
+			width:50%;
+			left:22%;
+			padding:8px;
+			font-size:.9rem;
+		}
+
+		@mixin atLarge{
+			padding:10px;
+			font-size:1rem;
+		}
+		
+	}
+}
+
+#packages{
+	background-color:rgba(23,51,90,.4);
+	padding-top:40px;
+	padding-bottom:40px;
+}
