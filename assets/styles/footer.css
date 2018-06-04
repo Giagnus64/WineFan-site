@@ -1,0 +1,69 @@
+.footer{
+	background-color:rgba(23,51,72,.3);
+	
+	&__contact{
+		display:flex;
+		width:100%;
+		flex-wrap: wrap;
+		justify-content:space-around;
+		align-items:center;
+
+		& p{
+			display:inline;
+			text-align:center;
+			flex-basis:100%;
+			margin-bottom:-10px;
+
+			@mixin atSmall{
+				flex-basis:50%;
+			}
+		}
+
+		&--address{
+			margin-bottom:-10px;
+
+			@mixin atSmall{
+				margin-bottom:0px;
+			}
+		}
+
+		&--phone-email{
+			line-height:1.5;
+			font-weight:600;
+		}
+
+	}
+
+	&__copy{
+		text-align:center;
+		margin-bottom:0;
+		flex-basis:100%;
+
+		@mixin atSmall{
+			flex-basis:50%;
+		}
+	}
+
+	&__social-links{
+		display:flex;
+		flex-basis:100%;
+		justify-content:center;
+		align-items:center;
+		margin-top:0px;
+
+		@mixin atSmall{
+			margin-top:25px;
+			flex-basis:50%;
+		}
+
+
+		& img{
+			color:white;
+			width:40px;
+			height:40px;
+			margin:5px;
+		}
+	}
+
+
+}
