@@ -346,6 +346,7 @@ body{
 	margin:0;
 	min-height:100%;
 	font-family: 'Montserrat', 'sans-serif';
+	margin-bottom:-50px;
 }
 
 img{
@@ -360,6 +361,10 @@ a{
 
 picture{
 	display:block;
+}
+
+.credits{
+	display:none;
 }
 
 .main-hero{
@@ -831,6 +836,13 @@ picture{
 
 	}
 
+.row__footer{
+		justify-content:space-around;
+	}
+
+@media(min-width:510px){
+	}
+
 .about-us__block{
 		width:100%;
 		flex-basis:100%;
@@ -1130,7 +1142,87 @@ picture{
 	}
 	}
 
+.footer{
+	background-color:rgba(23,51,72,.3);
+
+
+}
+
+.footer__contact{
+		display:flex;
+		width:100%;
+		flex-wrap: wrap;
+		justify-content:space-around;
+		align-items:center;
+
+	}
+
+.footer__contact p{
+			display:inline;
+			text-align:center;
+			flex-basis:100%;
+			margin-bottom:-10px;
+		}
+
+@media(min-width:510px){
+
+.footer__contact p{
+				flex-basis:50%
+		}
+	}
+
+.footer__contact--address{
+			margin-bottom:-10px;
+		}
+
+@media(min-width:510px){
+
+.footer__contact--address{
+				margin-bottom:0px
+		}
+	}
+
+.footer__contact--phone-email{
+			line-height:1.5;
+			font-weight:600;
+		}
+
+.footer__copy{
+		text-align:center;
+		margin-bottom:0;
+		flex-basis:100%;
+	}
+
+@media(min-width:510px){
+
+.footer__copy{
+			flex-basis:50%
+	}
+	}
+
+.footer__social-links{
+		display:flex;
+		flex-basis:100%;
+		justify-content:center;
+		align-items:center;
+		margin-top:0px;
+	}
+
+@media(min-width:510px){
+
+.footer__social-links{
+			margin-top:25px;
+			flex-basis:50%
+	}
+	}
+
+.footer__social-links img{
+			color:white;
+			width:40px;
+			height:40px;
+			margin:5px;
+		}
+
 /* Finalize Colors Later
 
-Add alt descriptions to photos
-change name from 700 to 800*/
+Add alt descriptions to photos*/
