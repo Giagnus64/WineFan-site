@@ -5,4 +5,9 @@
 	@mixin atLarge{
 		width:90%;
 	}
+
+	&--small{
+		width:90%;
+		margin:0 auto;
+	}
 }

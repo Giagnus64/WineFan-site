@@ -21,6 +21,8 @@
 	&__heading{
 		font-weight:600;
 		font-size:1.5rem;
+		padding-left:5px;
+		padding-right:5px;
 	}
 
 	&__price{
