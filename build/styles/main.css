@@ -546,6 +546,13 @@ picture{
 .page-section{
 	position:relative;
 	display:block;
+
+}
+
+#testimonials{
+	padding-top:10px;
+
+
 }
 
 .btn{
@@ -752,6 +759,11 @@ picture{
 }
 	}
 
+.wrapper--small{
+		width:90%;
+		margin:0 auto;
+	}
+
 .visible {
   visibility: visible;
   opacity: 1;
@@ -812,6 +824,11 @@ picture{
 
 .row__pricing{
 		
+	}
+
+.row__testimonials{
+	margin-bottom:10px;
+
 	}
 
 .about-us__block{
@@ -920,6 +937,8 @@ picture{
 .price-card__heading{
 		font-weight:600;
 		font-size:1.5rem;
+		padding-left:5px;
+		padding-right:5px;
 	}
 
 .price-card__price{
@@ -987,6 +1006,131 @@ picture{
 	padding-bottom:40px;
 }
 
+.testimonial-box{
+	flex-basis:100%;
+	text-align:center;
+	margin:0 auto;
+	display:flex;
+	align-items:center;
+	border:4px solid black;
+	background-color:rgba(20,45,75,0.1);
+	padding-top:10px;
+	padding-bottom:10px;
+	margin-top:10px;
+	margin-bottom:10px;
+	position:relative;
+	min-height:140px;
+	box-shadow:3px 3px 2px 2px rgba(20,45,75,0.4);
+	border-radius:2%;
+}
+
+@media(min-width:510px){
+
+.testimonial-box{
+		min-height:185px
+}
+	}
+
+@media(min-width:700px){
+
+.testimonial-box{
+		flex-basis:48%
+}
+	}
+
+.testimonial-box img{
+		position:absolute;
+		min-width:125px;
+		width:20%;
+		bottom:10%;
+		left:3%;
+		border-radius:50%;
+		margin:0 auto;
+
+		}
+
+@media(min-width:510px){
+
+.testimonial-box img{
+			bottom:19%
+
+		}
+	}
+
+.testimonial-box__quote{
+		margin-left:165px;
+		font-size:.9rem;
+		margin-right:10px;
+
+	}
+
+@media(min-width:510px){
+
+.testimonial-box__quote{
+			font-size:1.1rem
+
+	}
+	}
+
+@media(min-width:700px){
+
+.testimonial-box__quote{
+			font-size:1rem;
+			margin-left:150px;
+			margin-top:-5px
+
+	}
+	}
+
+@media(min-width:900px){
+
+.testimonial-box__quote{
+			margin-top:0;
+			margin-left:165px;
+			font-size:1.2rem
+
+	}
+	}
+
+.testimonial-box__name{
+		position:absolute;
+		right:5%;
+		bottom:-2%;
+		font-size:.8rem;
+		font-weight:600;
+	}
+
+@media(min-width:443px){
+
+.testimonial-box__name{
+			font-size:1rem
+	}
+	}
+
+@media(min-width:510px){
+
+.testimonial-box__name{
+			font-size:1.2rem;
+			bottom:-5%
+	}
+	}
+
+@media(min-width:700px){
+
+.testimonial-box__name{
+		font-size:1rem;
+		bottom:-3%
+	}
+	}
+
+@media(min-width:900px){
+
+.testimonial-box__name{
+			font-size:1.2rem
+	}
+	}
+
 /* Finalize Colors Later
 
-Add backgorund color behind packages?*/
+Add alt descriptions to photos
+change name from 700 to 800*/
