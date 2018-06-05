@@ -14,7 +14,7 @@
 	& a{
 		display:block;
 		margin-top:5px;
-		color:white;
+		color:black;
 		text-decoration: none;
 	}
 }
@@ -25,12 +25,13 @@
 }
 
 .credits > div{
-	max-width:400px;
+	max-width:280px;
 	position:relative;
 	margin:10% auto;
 	padding:5px 20px 13px 20px;
 	border-radius:10px;
-	background:goldenrod;
+	background-color:rgba(255,239,189,1);
+	border:2px solid black;
 
 }
 

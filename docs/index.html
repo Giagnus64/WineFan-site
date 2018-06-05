@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content ="width=device-width, initial-scale=1.0">
+	<meta http-equip="X-UA-Compatible" content ="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,500i,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="build/styles/main.css">
+	<title>WineFan</title>
+</head>
+<body>
+	
+	<header class="header">
+			<div class="header__brand">
+				<img src="assets/images/logo-purple.png" alt="WineFan Brand">
+			</div>
+
+			<div class="header__menu-icon">
+				<div class="header__menu-icon__middle"></div>	
+			</div>
+			
+			<div class="header__menu-content">
+				<nav class="primary-nav">
+					<ul>
+						<li><a href="#about-us" id="about-us-link">About Us</a></li>
+						<li><a href="#packages" id="packages-link">Pricing</a></li>
+						<li><a href="#testimonials" id="testimonials-link">Reviews</a></li>
+					</ul>
+				</nav>
+			</div>
+	</header>
+	<div class="modal-menu">
+		<ul>
+			<li><a href="#about-us" id="about-us-link">About Us</a></li>
+			<li><a href="#packages" id="packages-link">Pricing</a></li>
+			<li><a href="#testimonials" id="testimonials-link">Reviews</a></li>
+		</ul>
+	</div>
+
+
+	
+	<div class="main-hero">
+			<picture>
+				<img
+				sizes="(max-width: 1400px) 100vw, 1400px"
+				srcset="
+				assets/images/kym-fields_px8dep_c_scale,w_200.jpg 200w,
+				assets/images/kym-fields_px8dep_c_scale,w_734.jpg 734w,
+				assets/images/kym-fields_px8dep_c_scale,w_1107.jpg 1107w,
+				assets/images/kym-fields_px8dep_c_scale,w_1400.jpg 1400w"
+				src="assets/images/kym-fields_px8dep_c_scale,w_1400.jpg"
+				alt="View of vineyard and full wine glass">
+			</picture>
+		<div class="main-hero__text">		
+			<div class="wrapper">
+				<h1 class="main-hero__title changing-text visible">Cheers!</h1>
+				<h2 class="main-hero__subtitle">Welcome to WineFan</h2>
+				<p class="main-hero__description">Wine Delivered Straight To Your Door</p>
+				<p><a href="#packages" class="main-hero__button btn">Order Now!</a></p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="page-section" id="about-us">
+			<div class="row">
+				<div class="about-us__block about_us__photo">
+					<a href="#openModal">
+						<picture>
+							<img
+							sizes="(max-width: 1200px) 100vw, 1200px"
+							srcset="
+							assets/images/guillermo-nolasco-134842-unsplash_zwub0h_c_scale,w_190.jpg 190w,
+							assets/images/guillermo-nolasco-134842-unsplash_zwub0h_c_scale,w_649.jpg 649w,
+							assets/images/guillermo-nolasco-134842-unsplash_zwub0h_c_scale,w_963.jpg 963w,
+							assets/images/guillermo-nolasco-134842-unsplash_zwub0h_c_scale,w_1200.jpg 1200w"
+							src="assets/images/guillermo-nolasco-134842-unsplash_zwub0h_c_scale,w_1200.jpg"
+							alt="Living room with wine on table">
+						</picture>
+					</a>
+				</div>
+				<div class="about-us__block about-us__text-box">
+					<h3 class="headline">Wine aficionados you can trust.</h3>
+					<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="about-us__block about-us__text-box about-us__text-box--order-two order-two">
+					<h3 class="headline">Wine aficionados you can trust.</h3>
+					<p class="text-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="about-us__block about-us__photo">
+					<a href="#openModal">
+						<picture>
+							<img
+							sizes="(max-width: 1200px) 100vw, 1200px"
+							srcset="
+							assets/images/nik-macmillan-474594-unsplash_eczuya_c_scale,w_190.jpg 190w,
+							assets/images/nik-macmillan-474594-unsplash_eczuya_c_scale,w_637.jpg 637w,
+							assets/images/nik-macmillan-474594-unsplash_eczuya_c_scale,w_941.jpg 941w,
+							assets/images/nik-macmillan-474594-unsplash_eczuya_c_scale,w_1200.jpg 1200w"
+							src="assets/images/nik-macmillan-474594-unsplash_eczuya_c_scale,w_1200.jpg"
+							alt="People clinking glasses">
+						</picture>
+					</a>
+				</div>
+			</div>
+	</div>
+
+	<div class="page-section" id="packages">
+		<div class="wrapper">
+			<div class="row row__pricing">
+				<div class="price-card">
+					<p class="price-card__heading">Basic Package</p>
+					<p class="price-card__price">$39.99</p>
+					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing.</p>
+					<p class="price-card__button">Order Now!</p>
+
+					
+				</div>
+				<div class="price-card">
+					<p class="price-card__heading">Wino Package</p>
+					<p class="price-card__price">$79.99</p>
+					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+					<p class="price-card__button">Order Now!</p>
+				</div>
+				<div class="price-card">
+					<p class="price-card__heading">Super Package</p>
+					<p class="price-card__price">$119.99</p>
+					<p class="price-card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius temp incidid ut labore.</p>
+					<p class="price-card__button">Order Now!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-section" id="testimonials">
+		<div class="wrapper wrapper--small">
+			<div class="row row__testimonials">
+				<div class="testimonial-box">
+					<a href="#openModal">
+						<picture class="testimonial-box__photo">
+							<img
+							sizes="(max-width: 480px) 100vw, 480px"
+							srcset="
+							assets/images/joe-gardner-face_vwlvhu_c_scale,w_160.jpg 160w,
+							assets/images/joe-gardner-face_vwlvhu_c_scale,w_365.jpg 365w,
+							assets/images/joe-gardner-face_vwlvhu_c_scale,w_480.jpg 480w"
+							src="joe-gardner-face_vwlvhu_c_scale,w_480.jpg"
+							alt="Reviewer # 1">
+						</picture>
+					</a>
+					<p class="testimonial-box__quote"><span class="quote">"</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="quote">"</span></p>
+					<p class="testimonial-box__name">- Joe Schmo</p>
+				</div>
+				<div class="testimonial-box">
+					<a href="#openModal">
+						<picture class="testimonial-box__photo">
+							<img
+							sizes="(max-width: 480px) 100vw, 480px"
+							srcset="
+							assets/images/taylor-grote-face_ayfmwy_c_scale,w_160.jpg 160w,
+							assets/images/taylor-grote-face_ayfmwy_c_scale,w_375.jpg 375w,
+							assets/images/taylor-grote-face_ayfmwy_c_scale,w_480.jpg 480w"
+							src="taylor-grote-face_ayfmwy_c_scale,w_480.jpg"
+							alt="Reviewer # 2">
+						</picture>
+					</a>
+					<p class="testimonial-box__quote"><span class="quote">"</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="quote">"</span></p>
+					<p class="testimonial-box__name">- Joe Schmo</p>
+				</div>
+			</div>
+			<div class="row row__testimonials">
+				<div class="testimonial-box">
+					<a href="#openModal">
+						<picture class="testimonial-box__photo">
+							<img
+							sizes="(max-width: 480px) 100vw, 480px"
+							srcset="
+							assets/images/kevin-lanceplaine-face_preos1_c_scale,w_160.jpg 160w,
+							assets/images/kevin-lanceplaine-face_preos1_c_scale,w_349.jpg 349w,
+							assets/images/kevin-lanceplaine-face_preos1_c_scale,w_480.jpg 480w"
+							src="kevin-lanceplaine-face_preos1_c_scale,w_480.jpg"
+							alt="Reviewer # 3">
+						</picture>
+					</a>
+					<p class="testimonial-box__quote"><span class="quote">"</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="quote">"</span></p>
+					<p class="testimonial-box__name">- Joe Schmo</p>
+				</div>
+				<div class="testimonial-box">
+					<a href="#openModal">
+						<picture class="testimonial-box__photo">
+							<img
+							sizes="(max-width: 480px) 100vw, 480px"
+							srcset="
+							assets/images/michael-dam-face_db8gzl_c_scale,w_160.jpg 160w,
+							assets/images/michael-dam-face_db8gzl_c_scale,w_340.jpg 340w,
+							assets/images/michael-dam-face_db8gzl_c_scale,w_480.jpg 480w"
+							src="michael-dam-face_db8gzl_c_scale,w_480.jpg"
+							alt="Reviewer # 4">
+						</picture>
+					</a>
+					<p class="testimonial-box__quote"><span class="quote">"</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="quote">"</span></p>
+					<p class="testimonial-box__name">- Joe Schmo</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="wrapper">
+			<div class="footer__contact">
+				<p class="footer__contact--address"><strong>WineFan Inc.</strong><br>200 Blah Street<br>Somecity, Somestate 55555</p>
+				<p class="footer__contact--phone-email">1(234)-555-5555<br>info@winefan.com</p>
+			</div>
+			<div class="row row__footer">
+				<p class="footer__copy">Made by <strong>Gianfranco Nuschese</strong> &copy;</p>
+				<p class="footer__social-links">
+					<a href="https://github.com/Giagnus64" target="_blank" class="github"><img src="assets/images/icons/github.png" alt="github link"></a>
+					<a href="mailto:giagnus64@gmail.com" target="_blank" class="email"><img src="assets/images/icons/envelope.png" alt="Email link"></a>
+					<a href="" class="website"><img src="assets/images/icons/information.png" alt="website link"></a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="credits" id="openModal">
+			<div>
+				<a href="#close" title="Close" class="close">X</a>
+				<h1 class="credits__title">Photo Credits</h1>
+				<a href="https://unsplash.com/@kymellis?utm_medium=referral&amp;utm_campaign=photographer-credit&amp;utm_content=creditBadge" class="photo-credit" target="_blank">Jumbotron Background</a>
+				<a href="https://unsplash.com/photos/oC5NGvN3FOo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Living Room with Wine</a>
+				<a href="https://unsplash.com/photos/CRCRyD0rxUw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Glasses Clinking</a>
+				<a href="https://unsplash.com/photos/pAs4IM6OGWI?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Reviewer # 1</a>
+				<a href="https://unsplash.com/photos/UiVe5QvOhao?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Reviewer # 2</a>
+				<a href="https://unsplash.com/photos/f7y_plIGCr4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Reviewer # 3</a>
+				<a href="https://unsplash.com/photos/mEZ3PoFGs_k?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="photo-credit" target="_blank">Reviewer # 4</a>
+			</div>
+	</div>
+<script src="build/app.bundle.js"></script>
+</body>
+</html>

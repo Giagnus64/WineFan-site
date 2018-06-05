@@ -13,7 +13,7 @@
 	position:relative;
 	min-height:140px;
 	box-shadow:3px 3px 2px 2px rgba(20,45,75,0.4);
-	border-radius:1%;
+	border-radius:10px;
 
 	@mixin atSmall{
 		min-height:185px;
