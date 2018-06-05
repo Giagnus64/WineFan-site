@@ -12,8 +12,14 @@ import {ui} from "./ui";
 //toggles header button
 document.querySelector(".header__menu-icon").addEventListener("click", toggleHeader);
 
+document.querySelector(".main-hero__button").addEventListener("click",
+	scrollHeader);
+
 //loads header changing function onload 
 window.onload = setHeader();
+
+
+
 
 //Vars
 const menu = document.querySelector(".modal-menu");
@@ -54,4 +60,8 @@ function setHeader(){
 
 		return headerCounter;
 	}, 4500);
+}
+
+function scrollHeader(e){
+	window.smoothScroll(document.querySelector("#packages"), 1000);
 }
