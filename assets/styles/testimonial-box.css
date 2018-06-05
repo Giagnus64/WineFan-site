@@ -4,7 +4,7 @@
 	margin:0 auto;
 	display:flex;
 	align-items:center;
-	border:4px solid black;
+	border:1px solid black;
 	background-color:rgba(20,45,75,0.1);
 	padding-top:10px;
 	padding-bottom:10px;
@@ -13,7 +13,7 @@
 	position:relative;
 	min-height:140px;
 	box-shadow:3px 3px 2px 2px rgba(20,45,75,0.4);
-	border-radius:2%;
+	border-radius:1%;
 
 	@mixin atSmall{
 		min-height:185px;

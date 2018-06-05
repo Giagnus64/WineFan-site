@@ -108,6 +108,7 @@
 	&__button{
 		font-size:.7rem;
 
+
 		@mixin atXSmall{
 			margin-top:120px;
 		}
